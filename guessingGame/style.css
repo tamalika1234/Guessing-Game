@@ -1,0 +1,131 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #fc0000, #f400a2, #002df8, #27fc01 , #fcf401);
+    background-size: 400% 400%;
+    animation: aurora 10s ease infinite;
+ 
+   
+}
+@keyframes aurora {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+
+.container {
+    background: transparent;
+    background-color: rgba(255, 255, 255, 0.55);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease;
+    max-width: 400px;
+    width: 90%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+h1{
+    color: #000;
+    margin-bottom: 20px;
+}
+
+
+.typing {
+    display: inline-block;
+    font-size: 32px;
+    color: #000;
+    letter-spacing: 1px;
+    animation: fadeInText 2s steps(14, end) forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+}
+@keyframes fadeInText {
+    0% {
+        width: 0ch;
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    100% {
+        width: 14ch;
+        opacity: 1;
+    }
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0000ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #008000;
+}
+
+button:active{
+    transform: scale(0.95);
+    background-color: #008000;
+    box-shadow: inset 0 0 5px #00000030;
+}
+
+#log{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    transition: all 0.4s ease;
+}
+
+
+
+#difficulty{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35%;
+    margin-right: 25%;
+    margin-bottom: 2rem;
+}
+
+
+@media (max-width: 500px){
+    .container{
+        width: 90%;
+        padding: 20px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    button{
+        width: 100%;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    #log{
+        font-size: 16px;
+    }
+}
